@@ -12,7 +12,7 @@ public class MainEstudiante {
 
         Estudiante estudiante = new Estudiante();
 
-        double nota1, nota2, nota3, notafinal;
+        double nota1, nota2, nota3;
 
         int opcion;
 
