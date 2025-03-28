@@ -12,8 +12,6 @@ public class MainEstudiante {
 
         Estudiante estudiante = new Estudiante();
 
-        double nota1, nota2, nota3;
-
         int opcion;
 
 
@@ -25,16 +23,13 @@ public class MainEstudiante {
             switch (opcion) {
                 case 1: {
                     System.out.print("Ingrese la primera nota: ");
-                    nota1 = sc.nextDouble();
-                    estudiante.setNotaExam1(nota1);
+                    estudiante.setNotaExam1(sc.nextDouble());
 
                     System.out.print("Ingrese la segunda nota: ");
-                    nota2 = sc.nextDouble();
-                    estudiante.setNotaExam2(nota2);
+                    estudiante.setNotaExam2(sc.nextDouble());
 
                     System.out.print("Ingrese la terca nota: ");
-                    nota3 = sc.nextDouble();
-                    estudiante.setNotaExam3(nota3);
+                    estudiante.setNotaExam3(sc.nextDouble());
                 }
                 break;
                 case 2:
