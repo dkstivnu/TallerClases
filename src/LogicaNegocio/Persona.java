@@ -9,11 +9,11 @@ public class Persona {
     private String sexo;
 
     public Persona() {
-        this.nombre = "";
-        this.apellido = "";
+        this.nombre = "No registrado";
+        this.apellido = "No registrado";
         this.edad = 0;
         this.ID = 0;
-        this.sexo = "";
+        this.sexo = "No registrado";
     }
 
     public Persona(String nombre, String apellido, int edad, long ID, String sexo) {
