@@ -80,7 +80,7 @@ public class Persona {
     /// Metodos propios
 
     public String esMayor() {
-        if (edad > 18) {
+        if (edad >= 18) {
             return "La persona es mayor de edad";
         }
         return "La persona no es mayor de edad";

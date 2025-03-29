@@ -11,10 +11,7 @@ public class MainPersona {
         Persona persona = new Persona();
         Scanner sc = new Scanner(System.in);
 
-        imprimirMenu();
-
         int opcion;
-
 
         do {
             imprimirMenu();
@@ -24,23 +21,23 @@ public class MainPersona {
             switch (opcion) {
                 case 1:
                     System.out.println("Ingrese el nombre: ");
-                    persona.setNombre(sc.nextLine());
+                    persona.setNombre(sc.next());
 
                     System.out.println("Ingrese el apellido: ");
-                    persona.setApellido(sc.nextLine());
+                    persona.setApellido(sc.next());
 
                     System.out.println("Ingrese el edad: ");
-                    persona.setEdad(sc.nextInt());
+                    persona.setEdad(obtenerEdad(sc));
 
-                    System.out.println("Ingrese el sexo: ");
-                    persona.setSexo(sc.nextLine());
+                    System.out.println("Ingrese el sexo (Masculino/Feminino o M/F): ");
+                    persona.setSexo(obtenerSexo(sc));
 
                     System.out.println("Ingrese el identificacion: ");
                     persona.setID(sc.nextLong());
 
                     break;
                 case 2:
-                    System.out.print(persona.getInformacion());
+                    System.out.println(persona.getInformacion());
                     break;
                 case 3:
                     System.out.println(persona.esMayor());
@@ -50,6 +47,61 @@ public class MainPersona {
             }
         } while (opcion != 4);
 
+    }
+
+    private static String obtenerSexo(Scanner sc) {
+        String sexo;
+        boolean esInvalido;
+        do {
+            sexo = sc.next();
+
+            switch (sexo) {
+                case "Masculino", "Feminino": {
+                    esInvalido = false;
+                }
+                break;
+                case "M": {
+                    sexo = "Masculino";
+                    esInvalido = false;
+                    break;
+                }
+                case "F": {
+                    sexo = "Femenino";
+                    esInvalido = false;
+                    break;
+                }
+                default: {
+                    esInvalido = true;
+                    System.out.println("El sexo no es valido, ingrese con cuidado nuevamente:");
+                }
+                break;
+            }
+
+        } while (esInvalido);
+        return sexo;
+    }
+
+    private static int obtenerEdad(Scanner sc) {
+        int edad;
+        boolean esInvalido;
+        do {
+            edad = sc.nextInt();
+
+            if (edad < 0) {
+                System.out.println("La edad no puede ser negativa, ingrese nuevamente:");
+                esInvalido = true;
+            } else if (edad > 120) {
+                System.out.println("La edad ingresada es demasiado grande, ingrese una edad valida:");
+                esInvalido = true;
+            } else if (edad == 0) {
+                System.out.println("La edad no puede ser igual a cero, ingrese nuevamente:");
+                esInvalido = true;
+            } else {
+                esInvalido = false;
+            }
+
+        } while (esInvalido);
+        return edad;
     }
 
     private static void imprimirMenu() {
