@@ -11,10 +11,6 @@ public class MainCaja {
         Scanner sc = new Scanner(System.in);
 
         float volumen;
-        float largo;
-        float ancho;
-        float alto;
-
         int opcion;
 
         Caja caja = new Caja();
@@ -27,20 +23,17 @@ public class MainCaja {
             switch (opcion) {
                 case 1: {
                     System.out.print("Ingrese el alto: ");
-                    alto = sc.nextFloat();
-                    caja.setAlto(alto);
+                    caja.setAlto(obtenerEntrada(sc));
 
                     System.out.print("Ingrese el ancho: ");
-                    ancho = sc.nextFloat();
-                    caja.setAncho(ancho);
+                    caja.setAncho(obtenerEntrada(sc));
 
                     System.out.print("Ingrese el largo: ");
-                    largo = sc.nextFloat();
-                    caja.setLargo(largo);
+                    caja.setLargo(obtenerEntrada(sc));
                 }
                 break;
                 case 2:
-                    System.out.print(caja.informacion());
+                    System.out.println(caja.informacion());
                     break;
                 case 3: {
                     volumen = caja.calcVolumen();
@@ -49,6 +42,8 @@ public class MainCaja {
                 break;
                 case 4:
                     break;
+                default:
+                    mensajeError(opcion);
             }
         } while (opcion != 4);
 
@@ -62,8 +57,31 @@ public class MainCaja {
 
         System.out.println(caja.informacion());
         System.out.println(caja2.informacion());
-        System.out.println(caja3.informacion());*/
+        System.out.println(caja3.informacion());
+        */
 
+    }
+
+    private static void mensajeError(int opcion) {
+        if (opcion < 0) {
+            System.out.println("La entrada no es valida! Debe ser positiva");
+        } else {
+            System.out.println("La entrada no es valida! Debe ser diferente de cero o menor que 4");
+        }
+    }
+
+    private static float obtenerEntrada(Scanner sc) {
+        float entrada;
+        do {
+            entrada = sc.nextFloat();
+
+            if (entrada < 0.0) {
+                System.out.println("La entrada no puede ser negativa, ingrese nuevamente: ");
+            } else if (entrada == 0.0) {
+                System.out.println("La entrada no puede ser cero, ingrese nuevamente: ");
+            }
+        } while (entrada <= 0.0);
+        return entrada;
     }
 
     public static void imprimirMenu() {

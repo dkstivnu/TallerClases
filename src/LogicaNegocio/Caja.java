@@ -70,9 +70,7 @@ public class Caja {
     /// Metodos propios
 
     public String informacion() {
-        String info;
-        info = "Alto: " + alto + " - " + "Ancho: " + ancho + " - " + "Largo:" + largo;
-        return info;
+        return "Alto: " + alto + " - " + "Ancho: " + ancho + " - " + "Largo: " + largo;
     }
 
     public float calcVolumen() {
