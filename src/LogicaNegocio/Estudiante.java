@@ -28,6 +28,7 @@ public class Estudiante {
         this.notaExam1 = estudiante.getNotaExam1();
         this.notaExam2 = estudiante.getNotaExam2();
         this.notaExam3 = estudiante.getNotaExam3();
+        this.notaFinal = estudiante.getNotaFinal();
     }
 
     /// Metodos get y set
@@ -56,6 +57,11 @@ public class Estudiante {
         this.notaExam3 = notaExam3;
     }
 
+    public double getNotaFinal() {
+        return notaFinal;
+    } // No hay metodo setNotaFinal porque depende
+    // de las demas notas para ser asignado
+
     /// Metodos propios
 
     public String getInformacion() {
@@ -63,7 +69,7 @@ public class Estudiante {
     }
 
     public double calcNotaFinal() {
-        this.notaFinal = (notaExam1 + notaExam2)*0.35 + (notaExam3)*0.3;
+        this.notaFinal = (notaExam1 + notaExam2) * 0.35 + (notaExam3) * 0.3;
         return notaFinal;
     }
 
