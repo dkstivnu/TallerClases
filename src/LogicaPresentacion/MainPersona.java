@@ -56,7 +56,7 @@ public class MainPersona {
             sexo = sc.next();
 
             switch (sexo) {
-                case "Masculino", "Feminino": {
+                case "Masculino", "Femenino": {
                     esInvalido = false;
                 }
                 break;
