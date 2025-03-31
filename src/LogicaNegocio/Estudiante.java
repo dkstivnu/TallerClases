@@ -17,7 +17,7 @@ public class Estudiante {
         notaExam3 = 0;
     }
 
-    public Estudiante(int nota1, int nota2, int nota3) {
+    public Estudiante(double nota1, double nota2, double nota3) {
         this.notaExam1 = nota1;
         this.notaExam2 = nota2;
         this.notaExam3 = nota3;
