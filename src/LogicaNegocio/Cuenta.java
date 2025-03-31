@@ -54,7 +54,7 @@ public class Cuenta {
     }
 
     public String retirarDinero(double dinero) {
-        if (dinero > 0 && dinero < this.dineroCuenta) {
+        if (dinero > 0 && dinero <= this.dineroCuenta) {
             this.dineroCuenta -= dinero;
             return "El dinero en la cuenta total es: " + dineroCuenta;
         } else if (dinero > this.dineroCuenta)
