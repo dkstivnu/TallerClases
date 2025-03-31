@@ -28,7 +28,7 @@ public class MainEstudiante {
                     System.out.print("Ingrese la segunda nota: ");
                     estudiante.setNotaExam2(obtenerNota(sc));
 
-                    System.out.print("Ingrese la terca nota: ");
+                    System.out.print("Ingrese la tercera nota: ");
                     estudiante.setNotaExam3(obtenerNota(sc));
                 }
                 break;
