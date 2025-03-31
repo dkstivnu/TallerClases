@@ -4,8 +4,8 @@ public class Cuenta {
 
     /// Atributos
 
-    String nombreTitular;
-    double dineroCuenta;
+    private String nombreTitular;
+    private double dineroCuenta;
 
     /// Constructores
 

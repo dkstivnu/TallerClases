@@ -3,12 +3,12 @@ package LogicaNegocio;
 public class Pelicula {
 
     ///Atributos
-    String nombre;
-    String director;
-    String genero;
-    int duracion;
-    int year;
-    double calificacion;
+    private String nombre;
+    private String director;
+    private String genero;
+    private int duracion;
+    private int year;
+    private double calificacion;
 
     //Constructores
 
