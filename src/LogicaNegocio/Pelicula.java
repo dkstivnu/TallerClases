@@ -110,7 +110,7 @@ public class Pelicula {
             return "Buena";
         }
         if (calificacion > 8 && calificacion <= 10) {
-            return "Exelente";
+            return "Excelente";
         }
         return "Fuera de rango";
     }
